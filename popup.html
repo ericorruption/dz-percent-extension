@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Percentage Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/p.js"></script>
+    <script type="text/javascript" src="js/core.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Percentage Calculator</h1>
+        <p class="headline">Calculate proportions for responsive projects.</p>
+    </header>
+
+    <main class="main" id="oMainPage">
+        <div class="column">
+            <label for="oContext">Context (100%)</label>
+            <input type="text" value="940px" id="oContext" />
+        </div>
+        <div class="column">
+            <label for="oBase"><strong>Element width</strong></label>
+            <input type="text" value="940px" id="oBase" />
+        </div>
+        <div class="column">
+            <label for="oPercent">Percentage</label>
+            <input type="text" value="100%" id="oPercent" />
+        </div>
+
+        <div class="options">
+            <a href="#" class="about" id="oAboutShow">About</a>
+            <a href="#" id="oSetDefault">Set as default values</a>
+        </div>
+    </main>
+
+    <aside class="main main-about hidden" id="oAboutPage">
+        <h2>About Percentage Calculator</h2>
+        <p>Calculate proportions and percentages for responsive design projects.</p>
+        <p>Developed by <a href="https://github.com/ericorruption" target="_blank">Ericorruption</a> and <a href="https://github.com/lfbittencourt" target="_blank">LF Bittencourt</a> at <a href="http://www.dzestudio.com.br" target="_blank">DZ Estúdio</a>.</p>
+        <p>Based on the awesome <a href="https://chrome.google.com/webstore/detail/cedkhglifjkdpijiphheomafjmkepigd" target="_blank">EM Calculator extension</a>, developed by James Haley.</p>
+
+        <a href="#" class="back" id="oAboutClose">Back to calculator</a>
+    </aside>
+</body>
+</html>
