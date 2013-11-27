@@ -93,11 +93,11 @@ app.init = function () {
                 } else if (e.findElement().id === 'oContext') {
                     nCurrentBase = $('oBase').value.tidyNumeric();
 
-                    $('oPercent').value = (100 * (nCurrentBase / nCurrentValue)).tidyDecimal(3) + '%';
+                    $('oPercent').value = (nCurrentValue === 0 ? 0 : (100 * (nCurrentBase / nCurrentValue)).tidyDecimal(3)) + '%';
                 } else if (e.findElement().id === 'oBase') {
                     nCurrentContext = $('oContext').value.tidyNumeric();
 
-                    $('oPercent').value = (100 * (nCurrentValue / nCurrentContext)).tidyDecimal(3) + '%';
+                    $('oPercent').value = (nCurrentValue === 0 || nCurrentContext === 0 ? 0 : (100 * (nCurrentValue / nCurrentContext)).tidyDecimal(3)) + '%';
                 }
             }
         };
