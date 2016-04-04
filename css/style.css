@@ -1,126 +1,133 @@
+/******************************************************************************/
+/* SCAFFOLD */
+/******************************************************************************/
+
+html {
+  min-height: 100%;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: sans-serif;
-    color: #000;
-    min-width: 450px;
-    -webkit-font-smoothing: antialiased;
+  min-width: 340px;
+  margin: .75em 1em 1em;
+  font-size: 14px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  outline: none;
 }
 
 ::selection {
-    background: #53a80f;
-    color: #000;
-    text-shadow: none;
+  background-color: #2ECC40;
+  color: #fff;
 }
 
-label{
-    font-size: 13px;
-    display: block;
-    text-indent: 4px;
-    margin-bottom: 0.5em;
+
+
+/******************************************************************************/
+/* FORM */
+/******************************************************************************/
+
+.o-input {
+  font-size: 19px;
+  border: 2px solid #bbb;
+  line-height: 2;
+  padding: 0 .5em;
+  width: 100%;
+  border-radius: 4px;
+  transition: border-color .2s ease-out;
 }
 
-input {
-    border: 1px solid #d9d9d9;
-    padding: 0 4px;
-    height: 2.267em;
-    line-height: 2.267;
-    font-size: 22px;
-    border-radius: 4px;
-    box-shadow: inset 0 1px 2px #e5e6e3;
-    width: 100%;
-    box-sizing: border-box;
-    transition: all 0.3s ease-out;
+.o-input:focus {
+  border-color: #2ECC40;
 }
 
-    input:focus {
-        background-color: #e3efd9;
-        border-color: #53a80f;
-        box-shadow: 0 0 0 1px #53a80f;
-        outline: none;
-    }
 
-h1 {
-    margin: 0.5em 0 0;
+
+/******************************************************************************/
+/* BUTTON */
+/******************************************************************************/
+
+.o-btn {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  margin: 0;
+  transition: all .2s ease-out;
+  border: none;
+  padding: .45em 1.25em .55em;
+  background: transparent;
+  color: #fff;
+  text-shadow: 2px 2px 0 rgba(0,0,0,.2);
+  background-color: #2ECC40;
+  box-shadow: inset -2px -2px 0 rgba(0,0,0, .2);
+  border-radius: 4px;
 }
 
-h2{
-    margin: 0;
+.o-btn:hover,
+.o-btn:focus,
+.o-btn:active {
+  background-color: #229930;
 }
 
-.headline{
-    color: #666;
-    margin: 0 0 1em;
+
+
+/******************************************************************************/
+/* GRID */
+/******************************************************************************/
+
+.o-row__padder {
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+  margin-bottom: 1em;
 }
 
-.main {
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    padding: 1em;
-    overflow: hidden;
-    max-height: 200px;
-    transition: all 0.3s ease-out;
+.o-row__padder .o-row {
+  border-spacing: 1.5em 0;
 }
 
-.column{
-    float: left;
-    width: 120px;
-    margin-left: 20px;
+.o-row {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
 }
 
-.column:first-child{
-    margin-left: 0;
+.o-col {
+  display: table-cell;
+  vertical-align: top;
 }
 
-.options{
-    clear: both;
-    padding: 1em 0 1px;
-    overflow: hidden;
+
+
+/******************************************************************************/
+/* UTILITIES */
+/******************************************************************************/
+
+.u-pull-right {
+  float: right;
 }
 
-.options a{
-    border: none;
-    color: #fff;
-    display: inline-block;
-    font-weight: bold;
-    line-height: 2.267;
-    background-color: #53a80f;
-    padding: 0 1.467em;
-    border-radius: 3px;
-    font-size: 15px;
-    text-decoration: none;
-}
-
-.options a:hover{
-    background-color: #4e9e0c;
-}
-
-.options a:active{
-    background-color: #418807;
-    -webkit-transform: translatey(1px);
-    transform: translatey(1px);
-}
-
-.hidden{
-    padding: 0 1em;
-    border: none;
-    max-height: 0;
-}
-
-.about{
-    float: right;
-}
-
-.main-about{
-    font-size: 13px;
-}
-
-.main-about a{
-    color: #53a80f;
-}
-
-.main-about a{
-    color: #53a80f;
-}
-
-.main-about h2{
-    margin: 0;
+.u-hidden {
+  display: none;
 }
