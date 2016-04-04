@@ -1,7 +1,6 @@
 'use strict';
 
 var $setDefaultsBtn,
-    $aboutBtn,
     $contextField,
     $baseField,
     $percentField;
@@ -33,6 +32,13 @@ var utils = {
       localStorage.defaultContext = $contextField.value;
       localStorage.defaultBase = $baseField.value;
       localStorage.defaultPercent = $percentField.value;
+
+      var defaultText = $setDefaultsBtn.innerHTML;
+
+      $setDefaultsBtn.innerHTML = 'Defaults set!';
+      setTimeout(function() {
+        $setDefaultsBtn.innerHTML = defaultText;
+      }, 2000);
     }
   }
 };
@@ -43,8 +49,7 @@ function calculate(e) {
   var targetId = e.target.id,
       value = utils.tidyNumeric(e.target.value),
       contextValue = utils.tidyNumeric($contextField.value),
-      baseValue    = utils.tidyNumeric($baseField.value),
-      percentValue = utils.tidyNumeric($percentField.value);
+      baseValue    = utils.tidyNumeric($baseField.value);
 
   switch(targetId) {
     case 'context':
@@ -87,7 +92,6 @@ function calculate(e) {
 
 function init() {
   $setDefaultsBtn = document.getElementById('set-defaults');
-  $aboutBtn       = document.getElementById('about-show');
   $contextField   = document.getElementById('context');
   $baseField      = document.getElementById('base');
   $percentField   = document.getElementById('percent');

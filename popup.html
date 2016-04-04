@@ -7,40 +7,25 @@
   <script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
-  <header class="c-panel u-hidden" id="header">
-    <h1>Percentage Calculator</h1>
-    <p>Calculate proportions for responsive design projects.</p>
-  </header>
-
-  <main class="c-panel" id="main">
-    <div class="o-row__padder">
-      <div class="o-row">
-        <div class="o-col">
-          <label for="context">Context (100%)</label>
-          <input type="text" class="o-input" value="940px" id="context" />
-        </div>
-        <div class="o-col">
-          <label for="base"><strong>Element width</strong></label>
-          <input type="text" class="o-input" value="940px" id="base" />
-        </div>
-        <div class="o-col">
-          <label for="percent">Percentage</label>
-          <input type="text" class="o-input" value="100%" id="percent" />
-        </div>
+  <div class="o-row__padder">
+    <div class="o-row">
+      <div class="o-col">
+        <label for="context">Context (100%)</label>
+        <input type="text" class="o-input" value="940px" id="context" />
+      </div>
+      <div class="o-col">
+        <label for="base"><strong>Element width</strong></label>
+        <input type="text" class="o-input" value="940px" id="base" />
+      </div>
+      <div class="o-col">
+        <label for="percent">Percentage</label>
+        <input type="text" class="o-input" value="100%" id="percent" />
       </div>
     </div>
+  </div>
 
-    <button type="button" class="o-btn" id="set-defaults">Set as default values</button>
-  </main>
+  <button type="button" class="o-btn" id="set-defaults">Set as default values</button>
 
-  <footer class="c-panel u-hidden" id="about">
-    <p>Developed by
-      <a href="http://www.ericquanz.com" target="_blank">Ericorruption</a>
-      and <strong>LF Bittencourt</strong> at
-      <a href="http://www.dzestudio.com.br" target="_blank">DZ Estúdio</a>.
-    </p>
-
-    <p>Based on the awesome <a href="https://chrome.google.com/webstore/detail/cedkhglifjkdpijiphheomafjmkepigd" target="_blank">EM Calculator extension</a>, developed by James Haley.</p>
-  </footer>
+  <a href="https://github.com/ericorruption/dz-percent-extension" target="_blank" class="o-btn u-pull-right">About</a>
 </body>
 </html>
