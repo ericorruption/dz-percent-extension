@@ -17,6 +17,23 @@ var utils = {
 
   tidyDecimal: function(value, decimalPoints) {
     return Math.abs(value.toFixed(decimalPoints));
+  },
+
+  settings: {
+    loadDefaults: function() {
+      var areDefaultsSet = localStorage.defaultsSet || false;
+      if (areDefaultsSet) {
+        $contextField.value = localStorage.defaultContext;
+        $baseField.value = localStorage.defaultBase;
+        $percentField.value = localStorage.defaultPercent;
+      }
+    },
+    setDefaults: function() {
+      localStorage.defaultsSet = true;
+      localStorage.defaultContext = $contextField.value;
+      localStorage.defaultBase = $baseField.value;
+      localStorage.defaultPercent = $percentField.value;
+    }
   }
 };
 
@@ -81,6 +98,10 @@ function init() {
     fields[i].addEventListener('input', calculate);
     fields[i].addEventListener('blur', calculate);
   }
+
+  $setDefaultsBtn.addEventListener('click', utils.settings.setDefaults);
+
+  utils.settings.loadDefaults();
 }
 
 document.addEventListener('DOMContentLoaded', init);
